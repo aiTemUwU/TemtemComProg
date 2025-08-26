@@ -1,7 +1,7 @@
 d, m, y = [int(e) for e in input().split()]
 y -= 543
 n = 31
-m30d = [4, 5, 6, 9, 11]
+m30d = [4, 6, 9, 11]
 
 if m in m30d:
     n = 30
@@ -20,5 +20,6 @@ if m > 12:
     m -= 12
     y += 1
 y += 543
+
 
 print(f"{d}/{m}/{y}")
