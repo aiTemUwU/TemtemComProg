@@ -1,4 +1,4 @@
-correctAns, stuAns = input().replace(" ", ""), input().replace(" ", "")
+correctAns, stuAns = input(), input()
 score = 0
 
 if len(correctAns) == len(stuAns):
@@ -8,3 +8,4 @@ if len(correctAns) == len(stuAns):
         else: pass
     print(score)
 else: print("Incomplete answer")
+
