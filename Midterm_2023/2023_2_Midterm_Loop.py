@@ -16,7 +16,7 @@ for i in range(0, len(data)):
 			if currentCode != "":
 				output.append(currentCode)
 				currentCode = ""
-		else: pass
+		else: currentCode = ""
 
 if len(output) == 0: print("Not found")
 else:
