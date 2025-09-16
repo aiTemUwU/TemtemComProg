@@ -1,11 +1,8 @@
-Num = [float(i) for i in input().split()]
-peakList = []
+num = [float(i) for i in input().split()]
+peakCounter = 0
 
-for i in range(1, len(Num)-1):
-    peak = max(Num[i-1], Num[i], Num[i+1])
-    if peak == Num[i+1]: pass
-    else:
-        peakList.append(peak)
-        Num[Num.index(peak)] = Num[i+1]
-    
-print(len(peakList))
+for i in range(1, len(num)-1):
+    if num[i] > num[i-1] and num[i] > num[i+1]:
+        peakCounter += 1
+
+print(peakCounter)
