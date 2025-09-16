@@ -12,7 +12,7 @@ while info != "q":
 upUser = input().split()
 
 for i in range(0, len(user)):
-    if user[i] in upUser:
+    if user[i] in upUser and grade[i] != "A":
         grade[i] = gradeRank[gradeRank.index(grade[i])+1]
     else: pass
     
