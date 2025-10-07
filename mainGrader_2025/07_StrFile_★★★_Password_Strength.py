@@ -1,13 +1,13 @@
 consecChar = "!@#$%^&*()_+qwertyuiopasdfghjklzxcvbnm"
 consecAlp = "abcdefghijklmnopqrstuvwxyz"
-consecNum = "0123456789"
-symbols = "!@#$%^&*()_+"
+consecNum = "01234567890123456789"
+symbols = "!@#$%^&*()_+\'\""
 
 def containMoreEightChar(passw):
 	if len(passw) < 8:
 		return False
 	else: return True
-	
+
 def containUpper(passw):
 	for e in passw:
 		if e in consecAlp.upper():
@@ -24,7 +24,7 @@ def containNumber(passw):
 	for e in passw:
 		if e in consecNum:
 			return True
-	return False 
+	return False
 
 def containSymbol(passw):
 	for e in passw:
@@ -66,14 +66,14 @@ def containConsecChar(passw):
 def main():
 	passw = input().strip()
 	output = ""
-	
+
 	if not containMoreEightChar(passw): output += ("Less than 8 characters\n")
 	if not containLower(passw): output += ("No lowercase letters\n")
 	if not containUpper(passw): output += ("No uppercase letters\n")
 	if not containNumber(passw): output += ("No numbers\n")
 	if not containSymbol(passw): output += ("No symbols\n")
 	if containRep(passw): output += ("Character repetition\n")
-	if containConsecNum(passw): output += ("Numeber sequence\n")
+	if containConsecNum(passw): output += ("Number sequence\n")
 	if containConsecAlp(passw): output += ("Letter sequence\n")
 	if containConsecChar(passw): output += ("Keyboard pattern\n")
 	if output == "": output += ("OK")

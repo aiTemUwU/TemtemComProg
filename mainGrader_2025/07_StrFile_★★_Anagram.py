@@ -10,7 +10,7 @@ for i in range(0, len(text1)):
 	elif text1[i] == " ": pass
 	else:
 		numAlp1[alp1.index(text1[i])] += 1
-		
+
 for i in range(0, len(text2)):
 	if text2[i] not in alp2:
 		alp2.append(text2[i])
@@ -24,11 +24,11 @@ for i in range(0, len(alp1)):
 
 for i in range(0, len(alp2)):
 	alpSum2.append([alp2[i], numAlp2[i]])
-	
+
 alpSum1 = sorted(alpSum1)
 alpSum2 = sorted(alpSum2)
 
 if alpSum1 == alpSum2:
-	print("Yes")
+	print("YES")
 else:
 	print("NO")
