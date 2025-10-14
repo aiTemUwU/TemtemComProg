@@ -1,21 +1,17 @@
-firstNameList, nickNameList = [], []
-outPut = []
+firstToNick, nickToFirst = {}, {}
 
 for i in range(0, int(input())):
 	firstName, nickName = input().split()
-	
-	firstNameList.append(firstName)
-	nickNameList.append(nickName)
+
+	firstToNick.update({firstName:nickName})
+	nickToFirst.update({nickName:firstName})
 
 for i in range(0, int(input())):
 	firstOrNick = input()
 
-	if firstOrNick not in firstNameList + nickNameList:
-		outPut.append("Not found")
-	elif firstOrNick in firstNameList:
-		outPut.append(nickNameList[firstNameList.index(firstOrNick)])
-	elif firstOrNick in nickNameList:
-		outPut.append(firstNameList[nickNameList.index(firstOrNick)])
-		
-for i in range(0, len(outPut)):
-	print(outPut[i])
+	if firstOrNick not in firstToNick.keys() and firstOrNick not in nickToFirst.keys():
+		print("Not found")
+	elif firstOrNick in firstToNick.keys():
+		print(firstToNick.get(firstOrNick))
+	elif firstOrNick in nickToFirst.keys():
+		print(nickToFirst.get(firstOrNick))
