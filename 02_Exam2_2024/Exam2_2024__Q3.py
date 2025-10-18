@@ -1,4 +1,5 @@
-file1, file2, text = input().split(), input()
+file1, file2= input().split()
+text = input()
 posList, negList = [], []
 
 
@@ -7,8 +8,8 @@ posList, negList = [], []
 f1 = open(file1, "r")
 f2 = open(file2, "r")
 
-for line in f1: posList.append(line[:-1])
-for line in f2: negList.append(line[:-1])
+for line in f1: posList.append(line.strip())
+for line in f2: negList.append(line.strip())
 
 f1.close()
 f2.close()
