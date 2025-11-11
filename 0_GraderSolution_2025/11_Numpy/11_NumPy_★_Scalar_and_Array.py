@@ -1,6 +1,6 @@
 import numpy as np
 
-def toCelcius(f):
+def toCelsius(f):
     celcius = (5/9) * (f-32)
     return celcius
 

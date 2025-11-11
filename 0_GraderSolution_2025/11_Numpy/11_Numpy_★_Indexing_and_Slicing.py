@@ -14,6 +14,6 @@ def get_diagonal1(A):
 
 def get_diagonal2(A):
     reverseIden = np.identity(len(A), dtype = int)[::-1]
-    return np.sum(A * reverseIden, axis = 0)
+    return np.sum(A * reverseIden, axis = 0)[::-1]
 
 exec(input().strip())
