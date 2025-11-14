@@ -8,8 +8,8 @@ In 2024, seniors either had midterms and a final, or just three exams (with no m
 - 0_GraderSolution_2025: Answers to 2025 grader problems
 - 1_Exam1_2024: Problems and Answers to 2024 Exam1
 - 2_Exam2_2024: Problems and Answers to 2024 Exam2
-- 3_Midterm_2023: Problems and Answer to 2023 Midterm exam
-- 4_Exam3_TH_2022: Problems and Answer to Thai program 2022 Exam3
+- 3_Midterm_2023: Problems and Answers to 2023 Midterm exam
+- 4_Exam3_TH_2022: Problems and Answers to Thai program 2022 Exam3
 
 All of the solutions in this repo were timed during each attempt, so not all of the code is well-written or fully optimized. It was written in a rushed, speedrun manner, so don't expect it to have the lowest possible time complexity.
 
