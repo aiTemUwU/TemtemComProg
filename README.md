@@ -1,15 +1,16 @@
 # TemtemComProg
-temtem's speedrun version of comprog solution (Nano 21's section), but don't copy me lil bro😞😞
+temtem's speedrun version of comprog solution (NANO 21's section), but don't copy me lil bro😞😞
 
 In depth explaination on each problems uWu.
 https://youtu.be/dQw4w9WgXcQ?feature=shared
 
 In 2024, seniors either had midterms and a final, or just three exams (with no midterm or final). In 2025, it's only the latter.
-- 0_GraderSolution_2025: Answers to 2025 grader problems
-- 1_Exam1_2024: Problems and Answers to 2024 Exam1
-- 2_Exam2_2024: Problems and Answers to 2024 Exam2
-- 3_Midterm_2023: Problems and Answers to 2023 Midterm exam
-- 4_Exam3_TH_2022: Problems and Answers to Thai program 2022 Exam3
+- 00_GraderSolution_2025: Answers to all 2025 grader problems
+- 01_Exam1_2024: Problems and Answers to 2024 Exam1
+- 02_Exam1_2025: Problems and Answers to 2025 Exam1 (morning and afternoon section)
+- 03_Midterm_2023: Problems and Answers to 2023 Midterm exam
+- 04_Exam2_2024: Problems and Answers to 2024 Exam2
+- 05_Exam3_TH_2022: Problems and Answers to Thai program 2022 Exam3
 
 All of the solutions in this repo were timed during each attempt, so not all of the code is well-written or fully optimized. It was written in a rushed, speedrun manner, so don't expect it to have the lowest possible time complexity.
 
