@@ -23,7 +23,7 @@ class Card:
 
     def __lt__(self, rhs):
         suitList = ["club", "diamond", "heart", "spade"]
-        scoreList = ["3", "4", "5", "6", "7", "8", "9", "J", "Q", "K", "A", "2"]
+        scoreList = ["3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A", "2"]
 
         if self.value != rhs.value:
             return scoreList.index(self.value) < scoreList.index(rhs.value)
