@@ -43,44 +43,17 @@ class roman:
         outputRoman = []
         currentVal = int(value)
 
-        delVal, delIndex = [], []
-            
-        commonCase = ["I", "V", "X", "L", "C", "D", "M"][::-1]
-        commonValue = [1, 5, 10, 50, 100, 500, 1000][::-1]
+        syms = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"]
+        vals = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
 
-        specialCase = ["IV", "IX", "XL", "XC", "CD", "CM"][::-1]
-        specialUnfinisedCase = [["I", "I", "I", "I"], ["V", "I", "I", "I", "I"], ["V", "V", "V", "V"], ["X", "V", "V", "V", "V"], ["L", "L", "L", "L"], ["C", "L", "L", "L", "L"]][::-1]
+        for i in range(0, len(syms)):
+            if currentVal >= vals[i]:
+                countedLetter = currentVal//vals[i]
+                for j in range(0, countedLetter): outputRoman.append(syms[i])
+                currentVal -= countedLetter * vals[i]
+            if currentVal == 0: break
 
-        for i in range(0, len(commonCase)):
-            if currentVal >= commonValue[i]:
-                countedLetterRep = currentVal//commonValue[i]
-
-                currentVal -= countedLetterRep * commonValue[i]
-                for j in range(0, countedLetterRep):
-                    outputRoman.append(commonCase[i])
-            else: pass
-            
-        for i in range(2, len(outputRoman)):
-            checkingLetters = outputRoman[i-2:i+1]
-            if checkingLetters in [["I", "I", "I"], ["V", "V", "V"], ["L", "L", "L"]]:
-                if outputRoman[i-4:i+1] in specialUnfinisedCase:
-                    delVal.append(specialCase[specialUnfinisedCase.index(outputRoman[i-4:i+1])])
-                    delIndex.append([i-4, i+1])
-                elif outputRoman[i-3:i+1] in specialUnfinisedCase:
-                    delVal.append(specialCase[specialUnfinisedCase.index(outputRoman[i-3:i+1])])
-                    delIndex.append([i-3, i+1])
-                else: pass
-
-        delVal = delVal[::-1]
-        delIndex = delIndex[::-1]
-
-        for i in range(0, len(delIndex)):
-            del outputRoman[delIndex[i][0]:delIndex[i][1]]
-            outputRoman.insert(delIndex[i][0], delVal[i])
-            
-        outputRomanStr = "".join(letter for letter in outputRoman)
-
-        return roman(outputRomanStr)
+        return roman("".join(letter for letter in outputRoman))
 
 t, r1, r2 = input().split()
 a = roman(r1); b = roman(r2)
@@ -89,3 +62,4 @@ elif t == "2": print(int(a), int(b))
 elif t == "3": print(str(a), str(b))
 elif t == "4": print(int(a + b))
 else: print(str(a + b))
+
